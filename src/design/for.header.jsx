@@ -26,7 +26,7 @@ const For_Header = () => {
 		],
 		stats: [
 			{
-				value: '3+ yil',
+				value: '3 yil',
 				label: 'Tajriba',
 				icon: <ChartNoAxesCombined className='h-5 w-5 text-muted-foreground' />,
 			},

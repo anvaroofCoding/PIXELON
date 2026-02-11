@@ -40,7 +40,7 @@ export default function HeroSection({
 }) {
 	return (
 		<section className={cn('bg-background py-24 overflow-hidden', className)}>
-			<div className='container mx-auto grid lg:grid-cols-2 gap-12 items-center'>
+			<div className='container grid lg:grid-cols-2 gap-12'>
 				{/* TEXT */}
 				<motion.div
 					variants={container}
@@ -48,7 +48,10 @@ export default function HeroSection({
 					animate='show'
 					className='text-center lg:text-left space-y-6'
 				>
-					<motion.h1 variants={item} className='text-5xl font-bold'>
+					<motion.h1
+						variants={item}
+						className='text-5xl md:text-4xl text-center font-bold'
+					>
 						{title}
 					</motion.h1>
 
@@ -72,10 +75,7 @@ export default function HeroSection({
 						className='flex gap-4 justify-center lg:justify-start pt-6 overflow-x-auto scrollbar-hide'
 					>
 						{stats.map((s, i) => (
-							<div
-								key={i}
-								className='flex gap-2 items-center min-w-[120px] sm:min-w-[150px]'
-							>
+							<div key={i} className='flex gap-2 items-center '>
 								<div className='h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-muted flex items-center justify-center'>
 									{s.icon}
 								</div>

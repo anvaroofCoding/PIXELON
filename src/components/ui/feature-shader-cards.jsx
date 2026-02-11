@@ -382,13 +382,13 @@ export default function FeaturesCards() {
 	}
 
 	return (
-		<section className='min-h-screen py-20 px-4 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-background dark:to-background'>
+		<section className='min-h-screen py-10 px-4 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-background dark:to-background'>
 			<div className='max-w-7xl mx-auto'>
 				<div className='text-center mb-16'>
 					<h2 className='lg:mb-6 text-2xl md:text-4xl font-semibold  text-gray-900 dark:text-white'>
 						Xizmat turlari
 					</h2>
-					<p className='text-xl text-gray-600  dark:text-gray-300 max-w-3xl mx-auto leading-relaxed'>
+					<p className='md:text-xl text-md text-gray-600  dark:text-gray-300 max-w-3xl mx-auto leading-relaxed'>
 						Dasturlash sohasida eng talabgir xizmat turlarini taqdim etamiz.
 						Bizning tajribali jamoamiz sizning biznesingiz uchun eng yaxshi
 						yechimlarni yaratishga tayyor
