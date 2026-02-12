@@ -78,10 +78,14 @@ const Gallery6 = ({
 			<div className='container'>
 				<div className='mb-8 flex flex-col justify-between md:mb-14 md:flex-row md:items-end lg:mb-16'>
 					<div>
-						<h2 className='mb-3 text-3xl font-semibold md:mb-4 md:text-4xl lg:mb-6'>
+						<h2
+							data-aos='fade-up'
+							className='mb-3 text-3xl font-semibold md:mb-4 md:text-4xl lg:mb-6'
+						>
 							{heading}
 						</h2>
 						<a
+							data-aos='fade-up'
 							href={demoUrl}
 							className='group flex items-center gap-1 text-sm font-medium md:text-base lg:text-lg'
 						>
@@ -89,7 +93,11 @@ const Gallery6 = ({
 							<ArrowUpRight className='size-4 transition-transform group-hover:translate-x-1' />
 						</a>
 					</div>
-					<div className='mt-8 flex shrink-0 items-center justify-start gap-2'>
+
+					<div
+						data-aos='fade-up'
+						className='mt-8 flex shrink-0 items-center justify-start gap-2'
+					>
 						<Button
 							size='icon'
 							variant='outline'
@@ -115,7 +123,7 @@ const Gallery6 = ({
 					</div>
 				</div>
 			</div>
-			<div className='w-full'>
+			<div data-aos='fade-right' className='w-full'>
 				<Carousel
 					setApi={setCarouselApi}
 					opts={{

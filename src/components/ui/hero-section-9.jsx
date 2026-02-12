@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Counter from './Counter'
 
 const container = {
 	hidden: { opacity: 0 },
@@ -46,14 +47,25 @@ export default function HeroSection({
 					variants={container}
 					initial='hidden'
 					animate='show'
-					className='text-center lg:text-left space-y-6'
+					className='text-center lg:text-left space-y-6 flex flex-col items-center lg:items-start justify-center'
 				>
-					<motion.h1
-						variants={item}
-						className='text-5xl md:text-4xl text-center font-bold'
-					>
-						{title}
-					</motion.h1>
+					<div>
+						<motion.h1
+							variants={item}
+							className='text-5xl md:text-4xl font-bold'
+						>
+							Xush kelibsiz!
+						</motion.h1>
+						<motion.h2
+							variants={item}
+							className='text-5xl md:text-4xl font-bold'
+						>
+							{/* cyan-600 */}
+							Raqamli kelajagingizni <br />{' '}
+							<span className='text-cyan-600'>Pixelon</span> bilan birga
+							yarating
+						</motion.h2>
+					</div>
 
 					<motion.p variants={item} className='text-muted-foreground text-lg'>
 						{subtitle}
@@ -80,7 +92,9 @@ export default function HeroSection({
 									{s.icon}
 								</div>
 								<div>
-									<p className='font-bold text-lg sm:text-xl'>{s.value}</p>
+									<p className='font-bold text-lg sm:text-xl'>
+										<Counter targetValue={s.value} />
+									</p>
 									<p className='text-muted-foreground text-xs sm:text-sm'>
 										{s.label}
 									</p>

@@ -5,8 +5,8 @@ import Service from '@/design/for.service'
 
 export default function Home() {
 	return (
-		<div className='min-h-screen w-full overflow-hidden'>
-			<div className='w-full min-h-screen justify-center flex items-center '>
+		<div className='min-h-screen w-full overflow-hidden pt-10'>
+			<div className='w-full min-h-screen justify-center flex items-center'>
 				<For_Header />
 			</div>
 			<div className='relative'>

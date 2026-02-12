@@ -23,7 +23,10 @@ export default function ScrollIndicator() {
 				/>
 			</motion.div>
 
-			<p className='mt-4 text-xs dark:text-white/70 text-black/80 text-center select-none'>
+			<p
+				data-aos='fade-up'
+				className='mt-4 text-xs dark:text-white/70 text-black/80 text-center select-none'
+			>
 				Pastga scroll qiling
 			</p>
 		</div>

@@ -1,3 +1,5 @@
+import AosInit from '@/components/AosInit'
+import FooterMain from '@/shared/footer.main'
 import NavbarMain from '@/shared/navbar.main'
 import { ThemeProvider } from 'next-themes'
 import { Geist, Geist_Mono } from 'next/font/google'
@@ -26,7 +28,9 @@ export default function RootLayout({ children }) {
 			>
 				<ThemeProvider attribute='class' defaultTheme='light' enableSystem>
 					<NavbarMain />
+					<AosInit />
 					{children}
+					<FooterMain />
 				</ThemeProvider>
 			</body>
 		</html>
