@@ -49,21 +49,21 @@ export default function HeroSection({
 					className='text-center lg:text-left space-y-6 flex flex-col items-center lg:items-start justify-center'
 				>
 					<div>
-						<motion.h1
+						{/* <motion.h1
 							variants={item}
-							className='text-5xl md:text-4xl font-bold'
+							className='text-5xl md:text-6xl font-bold'
 						>
 							Xush kelibsiz!
-						</motion.h1>
-						<motion.h2
+						</motion.h1> */}
+						<motion.h1
 							variants={item}
-							className='text-5xl md:text-4xl font-bold'
+							className='text-5xl md:text-6xl font-bold'
 						>
 							{/* cyan-600 */}
 							Raqamli kelajagingizni <br />{' '}
 							<span className='text-cyan-600'>Pixelon</span> bilan birga
 							yarating
-						</motion.h2>
+						</motion.h1>
 					</div>
 
 					<motion.p variants={item} className='text-muted-foreground text-lg'>
@@ -86,7 +86,7 @@ export default function HeroSection({
 									height='18'
 									viewBox='0 0 24 24'
 									fill='currentColor'
-									class='icon icon-tabler icons-tabler-filled icon-tabler-caret-right'
+									className='icon icon-tabler icons-tabler-filled icon-tabler-caret-right'
 								>
 									<path stroke='none' d='M0 0h24v24H0z' fill='none' />
 									<path d='M9 6c0 -.852 .986 -1.297 1.623 -.783l.084 .076l6 6a1 1 0 0 1 .083 1.32l-.083 .094l-6 6l-.094 .083l-.077 .054l-.096 .054l-.036 .017l-.067 .027l-.108 .032l-.053 .01l-.06 .01l-.057 .004l-.059 .002l-.059 -.002l-.058 -.005l-.06 -.009l-.052 -.01l-.108 -.032l-.067 -.027l-.132 -.07l-.09 -.065l-.081 -.073l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057l-.002 -12.059z' />

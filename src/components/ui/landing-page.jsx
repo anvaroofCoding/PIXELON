@@ -295,7 +295,7 @@ export function DesignAgency() {
 							transition={{ duration: 0.6 }}
 							className='space-y-3'
 						>
-							<div className='inline-block rounded-3xl bg-muted px-3 py-1 text-sm'>
+							<div className='inline-block rounded-3xl bg-cyan-500/30 px-3 py-1 text-sm text-cyan-600'>
 								Aloqa
 							</div>
 							<h2 className='text-3xl font-bold tracking-tighter md:text-4xl/tight'>
@@ -381,7 +381,7 @@ export function DesignAgency() {
 							initial={{ opacity: 0, x: 50 }}
 							whileInView={{ opacity: 1, x: 0 }}
 							transition={{ duration: 0.6 }}
-							className='rounded-3xl border bg-background p-6 shadow-sm'
+							className='rounded-3xl bg-background p-6'
 						>
 							<h3 className='text-xl font-bold'>Bizga bog'lanish</h3>
 							<p className='text-sm text-muted-foreground'>
@@ -447,7 +447,10 @@ export function DesignAgency() {
 									whileHover={{ scale: 1.02 }}
 									whileTap={{ scale: 0.98 }}
 								>
-									<Button type='submit' className='w-full rounded-3xl'>
+									<Button
+										type='submit'
+										className='w-full rounded-3xl bg-cyan-600 hover:bg-cyan-700 text-white'
+									>
 										Xabarni yuborish
 									</Button>
 								</motion.div>

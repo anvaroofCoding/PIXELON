@@ -430,7 +430,7 @@ export default function FeaturesCards() {
 										colors={shaderConfig.colors}
 									/>
 								</div>
-								<div className='relative z-10 p-8 rounded-3xl h-full flex flex-col bg-black/80 border border-white/20 dark:border-white/10'>
+								<div className='relative z-10 p-8 rounded-3xl h-full flex flex-col bg-black/50 border border-white/20 dark:border-white/10'>
 									<div className='mb-6 filter drop-shadow-lg text-white'>
 										{feature.icon}
 									</div>
