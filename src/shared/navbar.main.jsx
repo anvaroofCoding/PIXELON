@@ -13,7 +13,7 @@ import {
 	X,
 } from 'lucide-react'
 import { useTheme } from 'next-themes'
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 const languages = [
 	{ code: 'en', name: 'English', flag: '🇺🇸' },
@@ -31,7 +31,12 @@ const socialIcons = [
 	{ id: 'gh', icon: Github, label: 'GitHub', link: '#' },
 ]
 
-const navItems = ['Bosh sahifa', 'Portfolio', 'Xizmatlar', 'Aloqa']
+const navItems = [
+	{ name: 'Bosh sahifa', link: '#header' },
+	{ name: 'Portfolio', link: '#portfolio' },
+	{ name: 'Xizmatlar', link: '#xizmatlar' },
+	{ name: 'Aloqa', link: '#aloqa' },
+]
 
 export default function NavbarMain() {
 	const { theme, setTheme } = useTheme()
@@ -43,6 +48,19 @@ export default function NavbarMain() {
 	const [showLangMenu, setShowLangMenu] = useState(false)
 
 	const isDark = theme === 'dark'
+
+	const menuRef = useRef(null)
+
+	useEffect(() => {
+		const handler = e => {
+			if (menuRef.current && !menuRef.current.contains(e.target)) {
+				setShowLangMenu(false)
+			}
+		}
+
+		document.addEventListener('mousedown', handler)
+		return () => document.removeEventListener('mousedown', handler)
+	}, [])
 
 	useEffect(() => setMounted(true), [])
 
@@ -86,9 +104,13 @@ export default function NavbarMain() {
 						{/* DESKTOP MENU */}
 						<div className='hidden md:flex gap-8'>
 							{navItems.map(item => (
-								<a key={item} href='#' className='relative font-medium group'>
+								<a
+									key={item.link}
+									href={item.link}
+									className='relative font-medium group'
+								>
 									<span className='transition-colors group-hover:text-cyan-600 dark:group-hover:text-cyan-400'>
-										{item}
+										{item.name}
 									</span>
 									<span className='absolute left-0 bottom-0 h-0.5 w-0 bg-gradient-to-r from-cyan-500 to-blue-600 transition-all group-hover:w-full'></span>
 								</a>
@@ -122,7 +144,10 @@ export default function NavbarMain() {
 								</Button>
 
 								{showLangMenu && (
-									<div className='absolute right-0 mt-2 w-48 bg-card border rounded-lg shadow-xl p-2 z-50'>
+									<div
+										ref={menuRef}
+										className='absolute right-0 mt-2 w-48 bg-card border rounded-lg shadow-xl p-2 z-50'
+									>
 										{languages.map(lang => (
 											<button
 												key={lang.code}
@@ -207,11 +232,12 @@ export default function NavbarMain() {
 						<div className='flex flex-col gap-4'>
 							{navItems.map(item => (
 								<a
-									key={item}
-									href='#'
+									key={item.link}
+									href={item.link}
+									onClick={() => setIsOpen(false)}
 									className='block text-lg font-semibold p-3 rounded-lg hover:bg-secondary transition-colors'
 								>
-									{item}
+									{item.name}
 								</a>
 							))}
 						</div>

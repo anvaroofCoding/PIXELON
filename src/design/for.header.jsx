@@ -17,6 +17,7 @@ const For_Header = () => {
 				text: 'Biz haqimizda',
 				href: '/join-class', // oldingi onClick o‘rniga link
 				variant: 'default',
+				background: 'cyan-600',
 			},
 			{
 				text: 'Xizmatlarimiz',
@@ -45,7 +46,7 @@ const For_Header = () => {
 	}
 
 	return (
-		<div className='w-full bg-background '>
+		<div id='header' className='w-full bg-background '>
 			<HeroSection
 				title={heroData.title}
 				subtitle={heroData.subtitle}

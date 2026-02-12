@@ -32,10 +32,10 @@ export default function FeaturesCards() {
 					viewBox='0 0 24 24'
 					fill='none'
 					stroke='currentColor'
-					stroke-width='2'
-					stroke-linecap='round'
-					stroke-linejoin='round'
-					class='icon icon-tabler icons-tabler-outline icon-tabler-file-analytics'
+					strokeWidth='2'
+					strokeLinecap='round'
+					strokeLinejoin='round'
+					className='icon icon-tabler icons-tabler-outline icon-tabler-file-analytics'
 				>
 					<path stroke='none' d='M0 0h24v24H0z' fill='none' />
 					<path d='M14 3v4a1 1 0 0 0 1 1h4' />
@@ -59,10 +59,10 @@ export default function FeaturesCards() {
 					viewBox='0 0 24 24'
 					fill='none'
 					stroke='currentColor'
-					stroke-width='2'
-					stroke-linecap='round'
-					stroke-linejoin='round'
-					class='icon icon-tabler icons-tabler-outline icon-tabler-briefcase'
+					strokeWidth='2'
+					strokeLinecap='round'
+					strokeLinejoin='round'
+					className='icon icon-tabler icons-tabler-outline icon-tabler-briefcase'
 				>
 					<path stroke='none' d='M0 0h24v24H0z' fill='none' />
 					<path d='M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -9' />
@@ -85,10 +85,10 @@ export default function FeaturesCards() {
 					viewBox='0 0 24 24'
 					fill='none'
 					stroke='currentColor'
-					stroke-width='2'
-					stroke-linecap='round'
-					stroke-linejoin='round'
-					class='icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart'
+					strokeWidth='2'
+					strokeLinecap='round'
+					strokeLinejoin='round'
+					className='icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart'
 				>
 					<path stroke='none' d='M0 0h24v24H0z' fill='none' />
 					<path d='M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0' />
@@ -111,10 +111,10 @@ export default function FeaturesCards() {
 					viewBox='0 0 24 24'
 					fill='none'
 					stroke='currentColor'
-					stroke-width='2'
-					stroke-linecap='round'
-					stroke-linejoin='round'
-					class='icon icon-tabler icons-tabler-outline icon-tabler-face-id-error'
+					strokeWidth='2'
+					strokeLinecap='round'
+					strokeLinejoin='round'
+					className='icon icon-tabler icons-tabler-outline icon-tabler-face-id-error'
 				>
 					<path stroke='none' d='M0 0h24v24H0z' fill='none' />
 					<path d='M4 8v-2a2 2 0 0 1 2 -2h2' />
@@ -139,7 +139,7 @@ export default function FeaturesCards() {
 					height='50'
 					viewBox='0 0 24 24'
 					fill='currentColor'
-					class='icon icon-tabler icons-tabler-filled icon-tabler-polaroid'
+					className='icon icon-tabler icons-tabler-filled icon-tabler-polaroid'
 				>
 					<path stroke='none' d='M0 0h24v24H0z' fill='none' />
 					<path d='M9.199 9.623l.108 .098l3.986 3.986l.094 .083a1 1 0 0 0 1.403 -1.403l-.083 -.094l-.292 -.293l1.292 -1.293l.106 -.095c.457 -.38 .918 -.38 1.386 .011l.108 .098l4.502 4.503a4.003 4.003 0 0 1 -3.596 2.77l-.213 .006h-12a4.002 4.002 0 0 1 -3.809 -2.775l5.516 -5.518l.106 -.095c.457 -.38 .918 -.38 1.386 .011zm8.801 -7.623a4 4 0 0 1 3.995 3.8l.005 .2v6.585l-3.293 -3.292l-.15 -.137c-1.256 -1.095 -2.85 -1.097 -4.096 -.017l-.154 .14l-1.307 1.306l-2.293 -2.292l-.15 -.137c-1.256 -1.095 -2.85 -1.097 -4.096 -.017l-.154 .14l-4.307 4.306v-6.585a4 4 0 0 1 3.8 -3.995l.2 -.005h12zm-2.99 3l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007z' />
@@ -180,10 +180,10 @@ export default function FeaturesCards() {
 					viewBox='0 0 24 24'
 					fill='none'
 					stroke='currentColor'
-					stroke-width='2'
-					stroke-linecap='round'
-					stroke-linejoin='round'
-					class='icon icon-tabler icons-tabler-outline icon-tabler-lock-cog'
+					strokeWidth='2'
+					strokeLinecap='round'
+					strokeLinejoin='round'
+					className='icon icon-tabler icons-tabler-outline icon-tabler-lock-cog'
 				>
 					<path stroke='none' d='M0 0h24v24H0z' fill='none' />
 					<path d='M12 21h-5a2 2 0 0 1 -2 -2v-6a2 2 0 0 1 2 -2h10c.564 0 1.074 .234 1.437 .61' />
@@ -212,10 +212,10 @@ export default function FeaturesCards() {
 					viewBox='0 0 24 24'
 					fill='none'
 					stroke='currentColor'
-					stroke-width='2'
-					stroke-linecap='round'
-					stroke-linejoin='round'
-					class='icon icon-tabler icons-tabler-outline icon-tabler-school'
+					strokeWidth='2'
+					strokeLinecap='round'
+					strokeLinejoin='round'
+					className='icon icon-tabler icons-tabler-outline icon-tabler-school'
 				>
 					<path stroke='none' d='M0 0h24v24H0z' fill='none' />
 					<path d='M22 9l-10 -4l-10 4l10 4l10 -4v6' />

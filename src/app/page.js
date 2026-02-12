@@ -10,12 +10,15 @@ export default function Home() {
 				<For_Header />
 			</div>
 			<div className='relative'>
-				<div className='absolute -top-12 left-1/2 -translate-x-1/2 z-20'>
+				<div
+					id='portfolio'
+					className='absolute -top-12 left-1/2 -translate-x-1/2 z-20'
+				>
 					<ScrollIndicator />
 				</div>
 				<AboutUs />
 			</div>
-			<div>
+			<div id='xizmatlar'>
 				<Service />
 			</div>
 		</div>

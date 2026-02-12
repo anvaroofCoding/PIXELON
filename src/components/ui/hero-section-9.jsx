@@ -76,7 +76,13 @@ export default function HeroSection({
 						className='flex gap-4 justify-center lg:justify-start'
 					>
 						{actions.map((a, i) => (
-							<Button key={i} size='lg' asChild variant={a.variant}>
+							<Button
+								key={i}
+								className={`bg-${a.background}  hover:bg-${a.background}/90`}
+								size='lg'
+								asChild
+								variant={a.variant}
+							>
 								<Link href={a.href}>{a.text}</Link>
 							</Button>
 						))}

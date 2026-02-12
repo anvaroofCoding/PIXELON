@@ -128,3 +128,28 @@
 .container {
 	@apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
+
+/* Global smooth + soft scroll */
+html {
+	scroll-behavior: smooth;
+}
+
+/* iOS + Mac touch scrollni chiroyli qiladi */
+body {
+	-webkit-overflow-scrolling: touch;
+}
+
+/* Anchor (id) ga sakramay, mayin yetib borishi */
+:target {
+	scroll-margin-top: 80px; /* navbar bo‘lsa moslab qo‘y */
+}
+
+/* Bonus: scrollni yanada yumshoq sezdiradi */
+* {
+	scroll-behavior: smooth;
+}
+
+html {
+	scroll-behavior: smooth;
+	overscroll-behavior: none;
+}

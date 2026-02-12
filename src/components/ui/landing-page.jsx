@@ -281,7 +281,7 @@ export function DesignAgency() {
 				</section>
 
 				{/* Contact Section */}
-				<section id='contact' className='w-full py-12 md:py-24 lg:py-32'>
+				<section id='aloqa' className='w-full py-12 md:py-24 lg:py-32'>
 					<motion.div
 						initial='hidden'
 						whileInView='visible'
