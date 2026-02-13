@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
+import { usePostMessageMutation } from '@/services/api'
 import { motion } from 'framer-motion'
 import {
 	Facebook,
@@ -15,6 +16,7 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { showToast } from 'nextjs-toast-notify'
 import { useEffect, useState } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from './avatar'
 
@@ -48,6 +50,46 @@ const itemFadeIn = {
 }
 
 export function DesignAgency() {
+	const [postMessage, { isLoading }] = usePostMessageMutation()
+	const [formData, setFormData] = useState({
+		firstname: '',
+		lastname: '',
+		email: '',
+		murojaat: '',
+	})
+	const handleSubmit = async e => {
+		e.preventDefault()
+		try {
+			await postMessage(formData).unwrap()
+			showToast.success('Xabaringiz muvaffaqiyatli yuborildi!', {
+				duration: 5000,
+				progress: true,
+				position: 'bottom-left',
+				transition: 'bounceIn',
+				icon: '',
+				sound: true,
+			})
+			setFormData({
+				firstname: '',
+				lastname: '',
+				email: '',
+				murojaat: '',
+			})
+		} catch (error) {
+			console.error('Xabar yuborishda xatolik:', error)
+			showToast.error(
+				"Xabar yuborishda xatolik yuz berdi. Iltimos, qayta urinib ko'ring.",
+				{
+					duration: 5000,
+					progress: true,
+					position: 'bottom-left',
+					transition: 'bounceIn',
+					icon: '',
+					sound: true,
+				},
+			)
+		}
+	}
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	const [scrollY, setScrollY] = useState(0)
 
@@ -387,7 +429,7 @@ export function DesignAgency() {
 							<p className='text-sm text-muted-foreground'>
 								Quyidagi shaklni to'ldiring va biz sizga qayta bog'lanamiz!
 							</p>
-							<form className='mt-6 space-y-3'>
+							<form onSubmit={handleSubmit} className='mt-6 space-y-3'>
 								<div className='grid gap-3 sm:grid-cols-2'>
 									<div className='space-y-2'>
 										<label
@@ -400,6 +442,10 @@ export function DesignAgency() {
 											id='first-name'
 											placeholder='Ismingizni yozing...'
 											className='rounded-3xl'
+											value={formData.firstname}
+											onChange={e =>
+												setFormData({ ...formData, firstname: e.target.value })
+											}
 										/>
 									</div>
 									<div className='space-y-2'>
@@ -413,6 +459,10 @@ export function DesignAgency() {
 											id='last-name'
 											placeholder='Familyangizni yozing...'
 											className='rounded-3xl'
+											value={formData.lastname}
+											onChange={e =>
+												setFormData({ ...formData, lastname: e.target.value })
+											}
 										/>
 									</div>
 								</div>
@@ -428,6 +478,10 @@ export function DesignAgency() {
 										type='email'
 										placeholder='Email manzilingizni yozing...'
 										className='rounded-3xl'
+										value={formData.email}
+										onChange={e =>
+											setFormData({ ...formData, email: e.target.value })
+										}
 									/>
 								</div>
 								<div className='space-y-2'>
@@ -441,6 +495,10 @@ export function DesignAgency() {
 										id='message'
 										placeholder='Xabaringizni yozing...'
 										className='min-h-[120px] rounded-3xl'
+										value={formData.murojaat}
+										onChange={e =>
+											setFormData({ ...formData, murojaat: e.target.value })
+										}
 									/>
 								</div>
 								<motion.div
@@ -448,10 +506,11 @@ export function DesignAgency() {
 									whileTap={{ scale: 0.98 }}
 								>
 									<Button
+										disabled={isLoading}
 										type='submit'
 										className='w-full rounded-3xl bg-cyan-600 hover:bg-cyan-700 text-white'
 									>
-										Xabarni yuborish
+										{isLoading ? 'Yuborilmoqda...' : 'Xabarni yuborish'}
 									</Button>
 								</motion.div>
 							</form>
